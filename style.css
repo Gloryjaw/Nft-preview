@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+/* Base css  */
+:root {
+  /* vd = very dark */
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --vd-blue-main: hsl(217, 54%, 11%);
+  --vd-blue-card: hsl(216, 50%, 16%);
+  --vd-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--vd-blue-main);
+}
+h1{
+  font-size: 1.25rem;
+}
+
+/* Colors */
+h1 {
+  color: white;
+}
+
+p,
+figcaption {
+  color: var(--soft-blue);
+}
+
+figcaption>span {
+  color: var(--white);
+}
+
+.price {
+  color: var(--cyan);
+}
+
+.time {
+  color: var(--soft-blue);
+}
+
+hr {
+  color: var(--vd-blue-line);
+}
+
+/* main css */
+main {
+  width: 80%;
+  background-color: var(--vd-blue-card);
+  padding: 1.3em;
+  border-radius: 10px;
+  max-width: 302px;
+}
+h1{
+  margin: 1em 0;
+}
+.price,
+.time {
+  display: flex;
+  width: 40%;
+  font-size: 0.8rem;
+  gap: 5px;
+}
+
+.price-time {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em 0;
+}
+
+.top-image {
+  position: relative;
+}
+
+.top-image>img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.view-image {
+
+  position: absolute;
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 10px;
+  transition: background-color 0.5s;
+
+}
+
+.view-image>img {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.view-image:hover {
+  background-color: hsla(178, 100%, 50%, 0.515);
+  cursor: pointer;
+}
+
+.view-image:hover>img {
+  opacity: 1;
+}
+h1:hover{
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+figure {
+  display: flex;
+  gap: 15px;
+  margin-top: 1em;
+}
+
+figure>img {
+  width: 10%;
+  border: 1px solid var(--white);
+  border-radius: 1000px;
+}
+figcaption{
+  font-size: 0.9rem;
+}
+figcaption>span:hover{
+  color: var(--cyan);
+  cursor: pointer;
+  
+}
